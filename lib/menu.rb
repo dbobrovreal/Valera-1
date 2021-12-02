@@ -17,12 +17,12 @@ class Menu
     beginning = IOAdapter.instance.input "\n[ВЫБЕРИТЕ ДЕЙСТВИЕ]:"
     if ACTIONS.include?(beginning)
       case beginning
-      when '1', 'START', 'start', 'старт'
+      when '1', 'START', 'start', 'Старт'
         @game.game_run
-      when '2', 'LOAD', 'load', 'загрузка'
+      when '2', 'LOAD', 'load', 'Загрузка'
         SaveOrLoad.new.load(@character)
         @game.game_run
-      when '3', 'EXIT', 'exit', 'выход'
+      when '3', 'EXIT', 'exit', 'Выход'
         IOAdapter.instance.output "До скорого)\n"
         exit
       end
